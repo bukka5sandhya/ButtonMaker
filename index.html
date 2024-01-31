@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1,shrink-no-fit=no">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <body>
+            <div class="bg-container">
+                <h1 class="main-heading">Button Maker</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-7">
+                            <div class="card">
+                                <p class="input-label">BACKGROUND COLOR</p>
+                                <input type="text" id="bgColorInput" class="user-input" />
+                                <p class="input-label">FONT COLOR</p>
+                                <input type="text" id="fontColorInput" class="user-input"/>
+                                <p class="input-label">FONT SIZE (in px)</p>
+                                <input type="text" id="fontSizeInput" class="user-input"/>
+                                <p class="input-label">FONT WEIGHT</p>
+                                <input type="text" id="fontWeightInput" class="user-input"/>
+                                <p class="input-label">PADDING (in px)</p>
+                                <input type="text" id="paddingInput" class="user-input"/>
+                                <p class="input-label">BORDER RADIUS (in px)</p>
+                                <input type="text" id="borderRadiusInput" class="user-input"/>
+                                <div class="text-right">
+                                <button class="btn-primary button" id="applyButton" onclick="clickApply()">Apply</button>
+                            </div>
+                            <div class="col-12 col-md-5 mt-4 text-center">
+                                <button class="custom-button" id="customButton">Custom Button</button>
+
+                            </diV>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!--javascript code-->
+        <script>
+            let bgColorInputEle = document.getElementById("bgColorInput");
+            let fontColorInputEle = document.getElementById("fontColorInput");
+            let fontSizeInputEle = document.getElementById("fontSizeInput");
+            let fontWeightInputELe = document.getElementById("fontWeightInput");
+            let paddingInputEle = document.getElementById("paddingInput");
+            let borderRadiusInputEle = document.getElementById("borderRadiusInput");
+            let applyButtonEle = document.getElementById("applyButton");
+            let customButtonEle = document.getElementById("customButton");
+
+
+            function clickApply(){
+                let bgColorInputVal = bgColorInputEle.value;
+                let fontColorInputVal = fontColorInputEle.value;
+                let fontSizeInputVal = fontSizeInputEle.value;
+                let fontWeightInputVal = fontWeightInputELe.value;
+                let paddingInputVal = paddingInputEle.value;
+                let borderRadiusInputVal = borderRadiusInputEle.value;
+                customButtonEle.style.backgroundColor = bgColorInputVal;
+                customButtonEle.style.color = fontColorInputVal;
+                customButtonEle.style.fontSize = fontSizeInputVal;
+                customButtonEle.style.fontWeight = fontWeightInputVal;
+                customButtonEle.style.padding = paddingInputVal;
+                customButtonEle.style.borderRadius = borderRadiusInputVal;
+            
+            }
+        </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
+    </body>
+</head>
+</html>
